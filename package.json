@@ -1,6 +1,6 @@
 {
   "name": "emi-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This repository contains some commonly used functions which are used while working with a emi calculation projects and scripts",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

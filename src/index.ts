@@ -85,13 +85,14 @@ export class EMICalculation {
           const p = amount;
           const fir = [];
           let balance = p;
+          const intrst = returnItem.interest / tenure;
           for (let i = 0; i < tenure; i++) {
             const temp: IEMIListItem = {
-              balance: Math.round(balance - returnItem.emi),
+              balance: Math.round(balance - (returnItem.emi - intrst)),
               emi: Math.round(returnItem.emi),
             };
             fir.push(temp);
-            balance = Math.round(balance - returnItem.emi);
+            balance = Math.round(balance - (returnItem.emi - intrst));
           }
           returnItem.fir = fir;
         }
